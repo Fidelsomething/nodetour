@@ -1,0 +1,27 @@
+extends layout
+script(src='/javascripts/typeahead.bundle.js', type='text/javascript')
+script(src='/javascripts/typeaheaddom.js')
+script(src='/javascripts/indexdom.js')
+
+block content
+	h1= title
+	p Welcome to #{title}
+	//  input(class="typeahead tt-query", spellcheck="false", autocomplete="off" name="typeahead" type="text")
+
+	//USER LIST
+	h2 User List
+	#userList
+		table
+			thead
+				th Tour Name
+				th Delete?
+			tbody
+	br
+	//Add Poi Section
+	#addP
+		button#btnShowAddPoi Add Poi		
+	br
+	//Add Tour Section
+	#addT
+		a(href='/addtour') Add a Tour
+		table
